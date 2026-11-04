@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrendyTots Admin Dashboard</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F8FAFC;
+}
+
+/* HEADER */
+
+.header{
+    background:#1E293B;
+    color:white;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#D4AF37;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#D4AF37;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    padding:40px;
+}
+
+.dashboard-title{
+    margin-bottom:30px;
+    color:#1E293B;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.card h2{
+    font-size:35px;
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#64748B;
+}
+
+/* SECTIONS */
+
+.section{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom:30px;
+}
+
+.section h2{
+    margin-bottom:20px;
+    color:#1E293B;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+th{
+    background:#1E293B;
+    color:white;
+    padding:12px;
+}
+
+td{
+    padding:12px;
+    border-bottom:1px solid #E2E8F0;
+}
+
+/* BUTTONS */
+
+.btn{
+    background:#D4AF37;
+    color:#1E293B;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+    font-weight:600;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    padding:20px;
+    color:#64748B;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+```
+<div class="logo">
+    TrendyTots Admin
+</div>
+
+<div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Collections</a>
+    <a href="wishlist.html">Wishlist</a>
+    <a href="cart.html">Cart</a>
+</div>
+```
+
+</div>
+
+<div class="dashboard">
+
+```
+<h1 class="dashboard-title">
+    Dashboard Overview
+</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <h2>12</h2>
+        <p>Total Products</p>
+    </div>
+
+    <div class="card">
+        <h2>156</h2>
+        <p>Customers</p>
+    </div>
+
+    <div class="card">
+        <h2>24</h2>
+        <p>Orders Today</p>
+    </div>
+
+    <div class="card">
+        <h2>₹45K</h2>
+        <p>Revenue</p>
+    </div>
+
+</div>
+
+<div class="section">
+
+    <h2>Product Management</h2>
+
+    <button class="btn">Add Product</button>
+    <button class="btn">Edit Product</button>
+    <button class="btn">Delete Product</button>
+
+</div>
+
+<div class="section">
+
+    <h2>Inventory Status</h2>
+
+    <table>
+
+        <tr>
+            <th>Product</th>
+            <th>Stock</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>Pink Party Dress</td>
+            <td>15</td>
+            <td>Available</td>
+        </tr>
+
+        <tr>
+            <td>Blue Casual Shirt</td>
+            <td>20</td>
+            <td>Available</td>
+        </tr>
+
+        <tr>
+            <td>Baby Romper</td>
+            <td>10</td>
+            <td>Low Stock</td>
+        </tr>
+
+    </table>
+
+</div>
+
+<div class="section">
+
+    <h2>Recent Orders</h2>
+
+    <table>
+
+        <tr>
+            <th>Order ID</th>
+            <th>Customer</th>
+            <th>Product</th>
+            <th>Amount</th>
+        </tr>
+
+        <tr>
+            <td>#ORD101</td>
+            <td>Priya</td>
+            <td>Pink Party Dress</td>
+            <td>₹999</td>
+        </tr>
+
+        <tr>
+            <td>#ORD102</td>
+            <td>Rahul</td>
+            <td>Baby Romper</td>
+            <td>₹699</td>
+        </tr>
+
+        <tr>
+            <td>#ORD103</td>
+            <td>Ananya</td>
+            <td>Blue Casual Shirt</td>
+            <td>₹799</td>
+        </tr>
+
+    </table>
+
+</div>
+```
+
+</div>
+
+<div class="footer">
+    © 2026 TrendyTots Admin Panel
+</div>
+
+</body>
+</html>

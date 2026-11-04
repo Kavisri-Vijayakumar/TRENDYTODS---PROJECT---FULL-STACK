@@ -1,0 +1,473 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#F8FAFC;
+    color:#1E293B;
+    line-height:1.6;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+nav{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo img{
+    height:60px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#1E293B;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#D4AF37;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    height:90vh;
+    background:url("../images/banner.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.hero-overlay{
+    background:rgba(255,255,255,0.88);
+    padding:50px;
+    border-radius:20px;
+    text-align:center;
+    max-width:700px;
+}
+
+.hero h1{
+    font-family:'Playfair Display',serif;
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:25px;
+}
+
+.btn{
+    display:inline-block;
+    background:#D4AF37;
+    color:#1E293B;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:8px;
+    font-weight:600;
+}
+
+.btn:hover{
+    background:#1E293B;
+    color:white;
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    padding:60px 10%;
+}
+
+.stat-box{
+    background:white;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.stat-box h2{
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+/* =========================
+   FEATURED PRODUCTS
+========================= */
+
+.featured-products{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.featured-products h2{
+    font-size:40px;
+    margin-bottom:40px;
+    font-family:'Playfair Display',serif;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.product-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-card img{
+    width:100%;
+    height:350px;
+    object-fit:cover;
+}
+
+.product-card h3{
+    margin:15px 0 10px;
+}
+
+.product-card p{
+    color:#D4AF37;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews{
+    padding:80px 10%;
+    text-align:center;
+}
+
+.reviews h2{
+    margin-bottom:40px;
+}
+
+.review-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.review-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.review-card h3{
+    color:#D4AF37;
+    margin-bottom:15px;
+}
+
+/* =========================
+   NEWSLETTER
+========================= */
+
+.newsletter{
+    background:#1E293B;
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.newsletter h2{
+    margin-bottom:15px;
+    font-family:'Playfair Display',serif;
+}
+
+.newsletter p{
+    margin-bottom:20px;
+}
+
+.newsletter input{
+    width:300px;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+}
+
+.newsletter button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#D4AF37;
+    color:#1E293B;
+    cursor:pointer;
+    font-weight:bold;
+    margin-left:10px;
+}
+
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about-page{
+    max-width:1000px;
+    margin:auto;
+    padding:80px 20px;
+    text-align:center;
+}
+
+.about-page h1{
+    font-size:50px;
+    margin-bottom:25px;
+    font-family:'Playfair Display',serif;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-section{
+    max-width:700px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.contact-section h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.contact-section input,
+.contact-section textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+.contact-section button{
+    background:#1E293B;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:8px;
+}
+
+/* =========================
+   TRY ON PAGE
+========================= */
+
+.tryon-section{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.preview-container{
+    display:flex;
+    justify-content:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.preview-container img{
+    width:280px;
+    height:350px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* =========================
+   CART / WISHLIST
+========================= */
+
+.cart-page{
+    padding:80px 10%;
+}
+
+.cart-page h1{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.cart-item{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   ADMIN DASHBOARD
+========================= */
+
+.admin-dashboard{
+    padding:60px 10%;
+}
+
+.dashboard-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin-bottom:40px;
+}
+
+.dashboard-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.dashboard-card h2{
+    color:#D4AF37;
+}
+
+.admin-section{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.admin-section table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.admin-section th,
+.admin-section td{
+    border:1px solid #ddd;
+    padding:12px;
+}
+
+.admin-section th{
+    background:#1E293B;
+    color:white;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0F172A;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav ul{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .newsletter input{
+        width:100%;
+        margin-bottom:10px;
+    }
+
+    .newsletter button{
+        margin-left:0;
+    }
+}
+.hero-overlay h4{
+    color:#D4AF37;
+    letter-spacing:3px;
+    margin-bottom:15px;
+}
+
+.hero-overlay h1{
+    line-height:1.1;
+}
+
+.hero-overlay p{
+    margin-top:15px;
+    margin-bottom:25px;
+}
+.shop-card h3 a{
+    text-decoration:none;
+    color:#1E293B;
+}
+
+.shop-card h3 a:hover{
+    color:#D4AF37;
+}
+
+.price{
+    font-size:20px;
+    font-weight:600;
+    color:#D4AF37;
+}
+
+#searchInput{
+    width:60%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.search-section{
+    text-align:center;
+    margin:30px 0;
+}

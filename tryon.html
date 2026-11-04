@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On - TrendyTots</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="images/logo.png" alt="TrendyTots Logo">
+        </div>
+
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="tryon.html">Virtual Try-On</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="wishlist.html">❤️ Wishlist</a></li>
+            <li><a href="admin.html">Admin</a></li>
+            <li><a href="assistant.html">🤖 AI Assistant</a></li>
+        </ul>
+    </nav>
+
+    <section class="tryon-section">
+
+        <h1>Virtual Dress Preview</h1>
+
+        <p>Upload a child's image and select an outfit.</p>
+
+        <input type="file" id="imageUpload" accept="image/*">
+
+        <br><br>
+
+        <select id="dressSelect">
+            <option value="">Select Dress</option>
+            <option value="images/pink-dress.jpg">Pink Party Dress</option>
+            <option value="images/blue-shirt.jpg">Blue Casual Shirt</option>
+            <option value="images/baby-romper.jpg">Baby Romper</option>
+        </select>
+
+        <div class="preview-container">
+
+            <div>
+                <h3>Child Photo</h3>
+                <img id="previewImage" src="" alt="Child Photo">
+            </div>
+
+            <div>
+                <h3>Selected Outfit</h3>
+                <img id="dressPreview">
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 TrendyTots | Kids Fashion Store</p>
+    </footer>
+
+    <script>
+       const imageUpload = document.getElementById("imageUpload");
+const previewImage = document.getElementById("previewImage");
+
+imageUpload.addEventListener("change", function () {
+
+    const file = this.files[0];
+
+    if (file) {
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+
+            previewImage.src = e.target.result;
+            previewImage.style.display = "block";
+
+        };
+
+        reader.readAsDataURL(file);
+    }
+});
+
+const dressSelect = document.getElementById("dressSelect");
+const dressPreview = document.getElementById("dressPreview");
+
+dressSelect.addEventListener("change", function () {
+
+    dressPreview.src = this.value;
+    dressPreview.style.display = "block";
+
+}); 
+
+    </script>
+
+</body>
+</html>

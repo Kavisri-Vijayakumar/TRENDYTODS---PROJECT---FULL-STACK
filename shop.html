@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendyTots - Collections</title>
+
+```
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+```
+
+</head>
+<body>
+
+<nav>
+
+```
+<div class="logo">
+    <img src="images/logo.png" alt="TrendyTots Logo">
+</div>
+
+<ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Collections</a></li>
+    <li><a href="tryon.html">Virtual Try-On</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li>
+    <a href="cart.html">
+        🛒 Cart (<span id="cart-count">0</span>)
+    </a>
+    </li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="register.html">Register</a></li>
+    <li><a href="wishlist.html">❤️ Wishlist</a></li>
+    <li><a href="admin.html">Admin</a></li>
+    <li><a href="assistant.html">🤖 AI Assistant</a></li>
+</ul>
+```
+
+</nav>
+
+<section class="shop-header">
+
+```
+<h1>Our Collections</h1>
+
+<p>Discover Premium Fashion For Little Stars</p>
+```
+
+</section>
+
+<section class="search-section">
+
+```
+<input type="text" placeholder="Search Products...">
+```
+
+</section>
+
+<section class="category-buttons">
+
+```
+<button>Girls</button>
+<button>Boys</button>
+<button>Baby</button>
+```
+
+</section>
+
+<section class="product-grid">
+
+```
+<div class="shop-card">
+
+    <span class="heart"
+    onclick="addToWishlist('Pink Party Dress',999)">
+    ❤️
+    </span>
+
+    <img src="images/pink-dress.jpg" alt="Pink Dress">
+
+    <h3>Pink Party Dress</h3>
+
+    <p>₹999</p>
+
+    <button onclick="addToCart('Pink Party Dress',999)">
+        Add To Cart
+    </button>
+
+</div>
+
+<div class="shop-card">
+
+    <span class="heart"
+    onclick="addToWishlist('Blue Casual Shirt',799)">
+    ❤️
+    </span>
+
+    <img src="images/blue-shirt.jpg" alt="Blue Shirt">
+
+    <h3>Blue Casual Shirt</h3>
+
+    <p>₹799</p>
+
+    <button onclick="addToCart('Blue Casual Shirt',799)">
+        Add To Cart
+    </button>
+
+</div>
+
+<div class="shop-card">
+
+    <span class="heart"
+    onclick="addToWishlist('Baby Romper',699)">
+    ❤️
+    </span>
+    <img src="images/baby-romper.jpg" alt="Baby Romper">
+
+    <h3>Baby Romper</h3>
+
+    <p>₹699</p>
+
+    <button onclick="addToCart('Baby Romper',699)">
+        Add To Cart
+    </button>
+
+</div>
+```
+
+</section>
+
+<footer>
+    <script src="js/script.js"></script>
+
+```
+<div class="footer-content">
+
+    <h3>TrendyTots</h3>
+
+    <p>Where Style Meets Childhood</p>
+
+    <p>© 2026 TrendyTots. All Rights Reserved.</p>
+
+</div>
+```
+
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

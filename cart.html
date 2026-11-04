@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TrendyTots</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+
+    <div class="logo">
+        <img src="images/logo.png" alt="TrendyTots Logo">
+    </div>
+
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Collections</a></li>
+        <li><a href="tryon.html">Virtual Try-On</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="cart.html">🛒 Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="wishlist.html">❤️ Wishlist</a></li>
+        <li><a href="admin.html">Admin</a></li>
+        <li><a href="assistant.html">🤖 AI Assistant</a></li>
+    </ul>
+
+</nav>
+
+<section class="cart-page">
+
+    <h1>Your Shopping Cart</h1>
+
+    <div class="cart-container">
+
+        <div id="cart-items">
+
+        </div>
+
+        <div class="cart-total">
+
+            <h2 id="total-price">
+                Total: ₹0
+            </h2>
+
+            <button class="checkout-btn">
+                Proceed To Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>TrendyTots</h3>
+
+        <p>Where Style Meets Childhood</p>
+
+        <p>© 2026 TrendyTots. All Rights Reserved.</p>
+
+    </div>
+
+</footer>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cartItems = document.getElementById("cart-items");
+
+let total = 0;
+
+function loadCart(){
+
+    cartItems.innerHTML = "";
+
+    total = 0;
+
+    cart.forEach((item,index)=>{
+
+        total += item.price;
+
+        cartItems.innerHTML += `
+
+        <div class="cart-item">
+
+            <h3>${item.name}</h3>
+
+            <p>Price: ₹${item.price}</p>
+
+            <button onclick="removeItem(${index})">
+                Remove
+            </button>
+
+        </div>
+
+        `;
+    });
+
+    document.getElementById("total-price").textContent =
+    "Total: ₹" + total;
+
+    let cartCount = document.getElementById("cart-count");
+
+    if(cartCount){
+        cartCount.textContent = cart.length;
+    }
+}
+
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    localStorage.setItem(
+        "cart",
+        JSON.stringify(cart)
+    );
+
+    loadCart();
+}
+
+loadCart();
+
+</script>
+
+</body>
+</html>
